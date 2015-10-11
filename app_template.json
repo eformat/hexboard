@@ -199,7 +199,10 @@
                             }
                         ],
                         "restartPolicy": "Always",
-                        "dnsPolicy": "ClusterFirst"
+                        "dnsPolicy": "ClusterFirst",
+                        "nodeSelector": {
+		                    "region": "primary"
+                        } 
                     }
                 }
             },
@@ -388,7 +391,10 @@
                             }
                         ],
                         "restartPolicy": "Always",
-                        "dnsPolicy": "ClusterFirst"
+                        "dnsPolicy": "ClusterFirst",
+                        "nodeSelector": {
+		                    "region": "primary"
+                        }
                     }
                 }
             },
