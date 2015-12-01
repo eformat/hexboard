@@ -100,7 +100,7 @@
                 "source": {
                     "type": "Git",
                     "git": {
-                        "uri": "http://github.com/eformat/hexboard/sketchpod"
+                        "uri": "http://github.com/eformat/sketchpod"
                     }
                 },
                 "strategy": {
@@ -276,7 +276,7 @@
                 "source": {
                     "type": "Git",
                     "git": {
-                        "uri": "http://github.com/eformat/hexboard/hexboard",
+                        "uri": "http://github.com/eformat/hexboard",
                         "ref": "master"
                     }
                 },
