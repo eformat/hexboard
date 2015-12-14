@@ -61,7 +61,7 @@ function verifyPodAvailable(parsed, timeout) {
     , timeout: timeout || 20000
     , pool: verifyAgent
     }
-    // console.log(tag, 'Verifying', options.url);
+    console.log(tag, 'Verifying', options.url);
     request(options, function(error, response, body) {
       if (!error && response && response.statusCode == 200) {
         if (pod.errorCount) {
