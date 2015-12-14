@@ -324,9 +324,9 @@ var watchStream = function(env, stream) {
       .retryWhen(retryVerification(10))
       .catch(Rx.Observable.return(pod));
     })
-    // .subscribeOnError(function(err) {
-    //   console.log(error);
-    // });
+    .subscribeOnError(function(err) {
+       console.log(error);
+    })
 };
 
 module.exports = {
