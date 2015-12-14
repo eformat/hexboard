@@ -50,11 +50,11 @@ var PodParser = function() {
     };
     var podName = update.object.spec.containers[0].name;
     if (podName.indexOf('sketchpod') !== 0 || !update.object.status || !update.object.status.phase) {
-      // console.log(tag, 'Ignoring update for container name:', update.object.spec.containers[0].name);
+      console.log(tag, 'Ignoring update for container name:', update.object.spec.containers[0].name);
     } else {
       var replicaName = update.object.metadata.name;
       //bundle the pod data
-      // console.log(tag, 'name',update.object.spec.containers[0].name, update.object.metadata.name)
+      console.log(tag, 'name',update.object.spec.containers[0].name, update.object.metadata.name)
       update.data = {
         id: podNumber(replicaName),
         name: replicaName,
