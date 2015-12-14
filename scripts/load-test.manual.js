@@ -25,7 +25,8 @@ console.log(http.globalAgent);
 var postImage = function(submission) {
   var user = submission.person;
   var id = getRandomInt(0,1060);
-  var url = 'http://localhost:9000/api/sketch/0?name='+user.name+'&cuid='+user.cuid+'&submission_id='+user.submissionId;
+  //var url = 'http://localhost:9000/api/sketch/0?name='+user.name+'&cuid='+user.cuid+'&submission_id='+user.submissionId;
+  var url = 'http://hexboard.apps.foo.com/api/sketch/0?name='+user.name+'&cuid='+user.cuid+'&submission_id='+user.submissionId;
   // var url = 'http://1k.jbosskeynote.com/api/sketch/0?name='+user.name+'&cuid='+user.cuid+'&submission_id='+user.submissionId;
   // var url = 'http://ec2-52-7-153-116.compute-1.amazonaws.com:80/api/sketch/0?name='+user.name+'&cuid='+user.cuid+'&submission_id='+user.submissionId;
   var options = {
@@ -43,12 +44,12 @@ var postImage = function(submission) {
   });
 }
 
-var bufferList = Rx.Observable.fromNodeCallback(fs.readdir)('static/thousand/sketches/')
+var bufferList = Rx.Observable.fromNodeCallback(fs.readdir)('test/sketches/')
   .flatMap(function(filenames) {
     return filenames;
   })
   .flatMap(function(filename) {
-    return Rx.Observable.fromNodeCallback(fs.readFile)('static/thousand/sketches/' + filename);
+    return Rx.Observable.fromNodeCallback(fs.readFile)('test/sketches/' + filename);
   })
   .toArray();
 

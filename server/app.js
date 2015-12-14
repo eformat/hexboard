@@ -25,6 +25,8 @@ app.use(middle.basicAuth);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(middle.cors);
+
+// FIXME Mike
 //app.get( '/js/config.js', function (req, res, next) {
 //  console.log('Fetching client configs...');
 //  res.send(client_configs.replace(/winner_count: 10/, "winner_count: " + config.get("WINNER_COUNT"))); 

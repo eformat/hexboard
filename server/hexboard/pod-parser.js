@@ -58,7 +58,7 @@ var PodParser = function() {
       update.data = {
         id: podNumber(replicaName),
         name: replicaName,
-        hostname: podName + '-summit3.apps.summit.paas.ninja',
+        hostname: podName, //'-summit3.apps.summit.paas.ninja',
         stage: update.type,
         type: 'event',
         timestamp: update.timestamp,
@@ -82,7 +82,7 @@ var PodParser = function() {
         }else{
           update.data.url = '/direct/' + update.data.ip + '/';
         }
-        console.log(update.data.url)
+        console.log(tag, "Update URL:" + update.data.url)
         update.data.stage = 4;
       } else {
         console.log(tag, "New data type found:" + JSON.stringify(update, null, '  '))
